@@ -15,12 +15,12 @@ function MyApp({ Component, pageProps }) {
       resources: {
         en: {
           translation: {
-            // add your English translations here
+           
           },
         },
         fr: {
           translation: {
-            // add your French translations here
+           
           },
         },
       },

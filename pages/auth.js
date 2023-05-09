@@ -32,14 +32,13 @@ export default function AuthPage() {
     if (code) {
       getAccessToken(code)
         .then((accessToken) => {
-          // Here you can handle the access token. For example, you could store it in
-          // local storage and redirect the user to another page.
+          
           localStorage.setItem('linkedin_access_token', accessToken);
           router.push('/[...slug]');
         })
         .catch((error) => {
           console.error(error);
-          // Here you could handle the error, for example by showing an error message to the user.
+          
         });
     }
   }, [code, router]);
