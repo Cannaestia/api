@@ -12,7 +12,7 @@ const Index = () => {
     </div>
     <div>
         <h1>Linkedin</h1>
-        <Link href="/linkedin" legacyBehavior>
+        <Link href="/[...slug]" legacyBehavior>
           <a>Go to Linkedin Tester</a>
         </Link>
       </div></>

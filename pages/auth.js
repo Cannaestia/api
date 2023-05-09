@@ -10,7 +10,7 @@ async function getAccessToken(code) {
   const tokenUrl = 'https://www.linkedin.com/oauth/v2/accessToken';
   const response = await axios.post(tokenUrl, null, {
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      'Content-Type': 'application/JSON',
     },
     params: {
       grant_type: 'authorization_code',
@@ -35,7 +35,7 @@ export default function AuthPage() {
           // Here you can handle the access token. For example, you could store it in
           // local storage and redirect the user to another page.
           localStorage.setItem('linkedin_access_token', accessToken);
-          router.push('/');
+          router.push('/[...slug]');
         })
         .catch((error) => {
           console.error(error);
